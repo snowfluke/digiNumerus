@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digi Numerus | Konversikan Bilangan Digitalmu</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h2>Digi Numerus</h2>
+    <p class="main">Alat konversi bilangan digital sederhana dengan langkah penyelesaian.</p>
+    <div id="app" class="main">
+        <p>Pilih Konversi</p>
+        <span class="line"></span>
+        <select class="u" onchange="handleChange(this.value)" placeholder="Masukkan Anggota Himpunan Semesta">
+            <option value="10,2">DEC ke BIN</option>    
+            <option value="10,16">DEC ke HEX</option>    
+            <option value="10,8">DEC ke OCT</option>    
+            <option value="2,10">BIN ke DEC</option>    
+            <option value="2,8">BIN ke OCT</option>    
+            <option value="2,16">BIN ke HEX</option>    
+            <option value="8,10">OCT ke DEC</option>    
+            <option value="8,2">OCT ke BIN</option>    
+            <option value="8,16">OCT ke HEX</option>    
+            <option value="16,10">HEX ke DEC</option>    
+            <option value="16,2">HEX ke BIN</option>    
+            <option value="16,8">HEX ke OCT</option>    
+        </select>
+        <p>Masukkan Bilangan</p>
+        <span class="line"></span>
+        <input type="text" class="b" placeholder="Bilangan DEC/BIN/OCT/HEX">
+        <button onclick="validate()">Hitung</button>
+    </div>
+    <div class="result">
+        <div class="container">
+            <h2 class="result">Langkah-Langkah</h2>
+            <button onclick="select()" class="copyBtn">Seleksi (Ctrl + a)</button>
+            <div id="res">
+                <div class="gridRes">
+                </div>
+                <span class ="urutan">Diurutkan dari bawah ke atas</span><br/>
+                <span class="finalStep"></span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        dibuat dengan vanila js & pure css oleh <a href="https://snowfluke.github.io/">awal ariansyah</a>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
